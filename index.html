@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gerador de senha dinamico">
+    <meta name="keywords" content="gerador, senha, gerador de senha, generator, password generator">
+    <link rel="icon" href="img/shield.png" type="img/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Safe Generator</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Gerador de Senha</h1>
+        <label for="length">Quantidade de caracteres: <span id="lengthValue">8</span></label>
+        <input type="range" id="length" min="1" max="20" value="8" oninput="updateValue(this.value)">
+        <br>
+        <input type="text" id="password" readonly>
+        <button onclick="generateAndCopyPassword()">Gerar Senha</button>
+        <p id="copyMsg"></p>
+    </div>
+
+    <script src="scrypt.js"></script>
+    
+    
+</body>
+</html>
